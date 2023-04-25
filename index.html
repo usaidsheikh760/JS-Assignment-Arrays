@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Q1;
+
+        let studentsName = [];
+
+        //end;
+
+        //Q2;
+
+        let students = {}; //JS object notation is not used to declare an empty array. It is used to declare an empty object.
+
+        //end;
+
+
+        //Q3;
+
+        let stringArray = ["apple", "banana", "mango"];
+
+        //end;
+
+        //Q4;
+
+        let numArray = [1, 2, 3];
+
+        //end;
+
+        //Q5;
+
+        let booleanArray = ["true", "false"];
+
+        //end;
+
+        //Q6;
+
+        let mixedArray = ["fruits", 1, "true"];
+
+        //end;
+
+        //Q7;
+
+        let availabeEdu = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil", "PhD"];
+        document.write("<h3>Qualifications</h3>");
+        for (let i = 0; i < availabeEdu.length; i++) {
+            document.write((i + 1) + ") " + availabeEdu[i] + "<br>");
+        }
+
+        //end;
+
+        //Q8;
+
+        let studentsName1 = ["Ali", "Huraim", "Hamza"];
+        let scoreStudents = [320, 230, 480];
+
+        let totalMarks = 500;
+        let percentage = [];
+        for (let i = 0; i < scoreStudents.length; i++) {
+            percentage[i] = (scoreStudents[i] / totalMarks) * 100;
+        }
+
+        document.write("<h3>Results</h3>");
+
+        for (let i = 0; i < studentsName1.length; i++) {
+            document.write("Name: " + studentsName1[i] + "<br>");
+            document.write("Score: " + scoreStudents[i] + " out of " + totalMarks + "<br>");
+            document.write("Percentage: " + percentage[i] + "%<br><br>");
+        }
+
+        //end;
+
+        //Q9;
+
+        let coloursNames = ["red", "blue", "green", "black", "blue"];
+        document.write("<h3>Q9</h3>");
+        document.write(coloursNames);
+
+        document.write("<h3>Q9(a)</h3>");
+        let userAdd = prompt("Which colour you want to add to the beginning?");
+        coloursNames.unshift(userAdd);
+        document.write(coloursNames);
+
+        document.write("<h3>Q9(b)</h3>");
+        let userAdd1 = prompt("Which colour you want to add to the end?");
+        coloursNames.push(userAdd);
+        document.write(coloursNames);
+
+
+        document.write("<h3>Q9(c)</h3>");
+        coloursNames.unshift("white", "yellow");
+        document.write(coloursNames);
+
+
+        document.write("<h3>Q9(d)</h3>");
+        coloursNames.shift();
+        document.write(coloursNames);
+
+
+        document.write("<h3>Q9(e)</h3>");
+        coloursNames.pop();
+        document.write(coloursNames);
+
+
+        document.write("<h3>Q9(f)</h3>");
+        let indexToAdd = prompt("At which index do you want to add colour(Enter a number)?");
+        let colourName = prompt("Name that colours you wanna add?");
+        coloursNames.splice(indexToAdd, 0, colourName);
+        document.write(coloursNames);
+
+
+        document.write("<h3>Q9(g)</h3>");
+        let indexToDel = prompt("At which index do you want to delete colours(Enter a number)?");
+        let itemsToDel = prompt("How many colours do you want to delete(Enter a number)?");
+        coloursNames.splice(indexToDel, itemsToDel);
+        document.write(coloursNames);
+
+        //end;
+
+        //Q10;
+
+        document.write("<h3>Q10(g)</h3>");
+        let scoreOfStudents = [320, 230, 480, 120];
+        document.write("Score of students: " + scoreOfStudents + "<br>");
+
+        scoreOfStudents.sort(function (a, b) {
+            return a - b;
+        })
+
+        document.write("Ordered scores of Students: " + scoreOfStudents);
+
+        //end;
+
+        //Q11;
+
+        document.write("<h3>Q11</h3>");
+
+        let cities = ["Karachi", "Lahore", "Islamabad", "Peshawar", "Quetta"];
+        let selectedCities = cities.slice(0, 3);
+
+        document.write("<h4>Cities list</h4>");
+        document.write(cities);
+        document.write("<h4>Selected Cities list</h4>");
+        document.write(selectedCities);
+
+        //end;
+
+        //Q12;
+
+        let array1 = ["This", "is", "my", "cat"];
+        let joinString = array1.join(" ")
+
+        document.write("<h3>Q12</h3>");
+
+        document.write("<h4>Array</h4>");
+        document.write(array1);
+
+        document.write("<h4>String</h4>");
+        document.write(joinString);
+
+        //end;
+
+        //Q13;
+
+        document.write("<h3>Q13</h3>");
+
+        let array2 = [];
+        array2.push("keyboard");
+        array2.push("mouse");
+        array2.push("printer");
+        array2.push("monitor");
+
+        document.write("<h4>Devices</h4>" + array2);
+
+
+        document.write("<h4>Out</h4>" + array2.shift());
+        document.write("<h4>Out</h4>" + array2.shift());
+        document.write("<h4>Out</h4>" + array2.shift());
+        document.write("<h4>Out</h4>" + array2.shift());
+
+        //end;
+
+        //Q14;
+
+        document.write("<h3>Q14</h3>");
+
+        let array3 = [];
+        array3.push("keyboard");
+        array3.push("mouse");
+        array3.push("printer");
+        array3.push("monitor");
+
+        document.write("<h4>Devices</h4>" + array3);
+        document.write("<h4>Out</h4>" + array3.pop());
+        document.write("<h4>Out</h4>" + array3.pop());
+        document.write("<h4>Out</h4>" + array3.pop());
+        document.write("<h4>Out</h4>" + array3.pop());
+
+        //end;
+
+        //Q15;
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phone Manufacturers</title>
+</head>
+
+<body>
+    <br><br><br>
+    <h3>Q15</h3>
+    <select>
+        <option>--Select a manufacturer--</option>
+        <script>
+            var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+            for (var i = 0; i < phoneManufacturers.length; i++) {
+                document.write("<option + phoneManufacturers[i]>" + phoneManufacturers[i] + "</option>");
+            }
+        </script>
+    </select>
+</body>
+
+</html>
